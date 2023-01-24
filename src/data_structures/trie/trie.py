@@ -25,7 +25,7 @@ class Trie():
         length = len(word)
         for i in range(length):
             letter = word[i]
-            if not node.children[letter]:
+            if letter not in node.children:
                 return False
             node = node.children[letter]
         return node.end_of_word

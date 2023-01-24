@@ -1,0 +1,8 @@
+apple
+banana
+grapefruit
+lemon
+mango
+papaya
+pitaya
+tangerine

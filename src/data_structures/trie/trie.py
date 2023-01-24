@@ -29,3 +29,11 @@ class Trie():
                 return False
             node = node.children[letter]
         return node.end_of_word
+
+    def read_file(self, file_path: str):
+        """Reads a file and adds its contents to the trie."""
+        with open(file_path) as file:
+            contents = file.readlines()
+
+        for word in contents:
+            self.add_word(word.strip())

@@ -32,8 +32,6 @@ class Trie():
 
     def read_file(self, file_path: str):
         """Reads a file and adds its contents to the trie."""
-        with open(file_path) as file:
-            contents = file.readlines()
-
-        for word in contents:
-            self.add_word(word.strip())
+        with open(file_path, encoding="utf-8") as file:
+            for word in file.readlines():
+                self.add_word(word.strip())

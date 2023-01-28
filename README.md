@@ -8,3 +8,5 @@ https://github.com/dwyl/english-words. Copyright belongs to Infochimps: [https:/
 ## Weekly reports
 
 [Week 1](./documentation/weekly-report-1.md)
+
+[Week 2](./documentation/weekly-report-2.md)

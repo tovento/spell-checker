@@ -31,4 +31,11 @@ class TestDamerauLevenshtein(unittest.TestCase):
         word2 = "lagorithm"
         distance = self.dl.calculate_distance(word1, word2)
 
-        self.assertEqual(distance, 1) 
+        self.assertEqual(distance, 1)
+
+    def test_transposition_with_addition(self):
+        word1 = "abcd"
+        word2 = "acxbd"
+        distance = self.dl.calculate_distance(word1, word2)
+
+        self.assertEqual(distance, 2)

@@ -22,3 +22,29 @@ frequency](./data/wiktionary-40k.txt) is taken from
 [Week 2](./documentation/weekly-report-2.md)
 
 [Week 3](./documentation/weekly-report-3.md)
+
+## Command line instructions
+
+### Starting the application
+
+```
+poetry run invoke start
+```
+
+### Running a pylint check
+
+```
+poetry run invoke pylint
+```
+
+### Running the tests
+
+```
+poetry run invoke test
+```
+
+### Creating a test coverage report
+
+```
+poetry run invoke coverage-report
+```

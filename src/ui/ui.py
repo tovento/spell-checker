@@ -7,7 +7,7 @@ class UI:
         self.check_spelling = CheckSpelling(self.trie)
 
     def start(self):
-        """Starts the user interface."""
+        """Start the user interface."""
         click.echo("Write 'q' to quit.")
         click.echo("Write a word for spellchecker.")
 

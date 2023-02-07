@@ -4,7 +4,7 @@ class DamerauLevenshtein():
 
     def calculate_distance(self, word1: str, word2: str):
         """
-        A function to calculate the Damerau-Levenshtein distance between two
+        Calculate the Damerau-Levenshtein distance between two
         words.
 
         Args:
@@ -59,7 +59,7 @@ class DamerauLevenshtein():
         return matrix[-1][-1]
 
     def create_matrix(self, len1, len2):
-        """Creates a matrix the size of (len1 + 2) * (len2 + 2)."""
+        """Create a matrix the size of (len1 + 2) * (len2 + 2)."""
         maxdist = len1 + len2
 
         matrix = [[maxdist for _ in range(len2+2)]]
@@ -69,21 +69,21 @@ class DamerauLevenshtein():
         return matrix
 
     def calculate_substitution(self, matrix: list, row: int, column: int, substitution_cost: int):
-        """Calculates the cost of substitution."""
+        """Calculate the cost of substitution."""
         return matrix[row][column] + substitution_cost
 
     def calculate_addition(self, matrix: list, row: int, column: int):
-        """Calculates the cost of addition. """
+        """Calculate the cost of addition. """
         return matrix[row+1][column] + 1
 
     def calculate_deletion(self, matrix: list, row: int, column: int):
-        """Calculates the cost of deletion."""
+        """Calculate the cost of deletion."""
         return matrix[row][column+1] + 1
 
     def calculate_transposition(self, matrix: list, row: int,
                                 column: int, last_matching_row: int,
                                 last_matching_column: int):
-        """Calculates the cost of transposition."""
+        """Calculate the cost of transposition."""
         return (matrix[last_matching_row][last_matching_column]
                 + (row - last_matching_row - 1) + 1
                 + (column - last_matching_column -1))

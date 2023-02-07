@@ -1,12 +1,12 @@
 from .trie_node import TrieNode
 
 class Trie():
-    """Represents a trie data structure."""
+    """Represent a trie data structure."""
     def __init__(self):
         self.root = TrieNode("")
 
     def add_word(self, word: str):
-        """Adds a new word into the trie."""
+        """Add a new word into the trie."""
         node = self.root
 
         for char in word:
@@ -20,7 +20,7 @@ class Trie():
         node.end_of_word = True
 
     def find(self, word: str):
-        """Searches for a word in the trie."""
+        """Search for a word in the trie."""
         node = self.root
         length = len(word)
         for i in range(length):
@@ -31,7 +31,7 @@ class Trie():
         return node.end_of_word
 
     def read_file(self, file_path: str):
-        """Reads a file and adds its contents to the trie."""
+        """Read a file and adds its contents to the trie."""
         with open(file_path, encoding="utf-8") as file:
             for word in file.readlines():
                 self.add_word(word.strip())

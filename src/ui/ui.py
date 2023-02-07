@@ -1,16 +1,24 @@
+import click
+from services.check_spelling_service import CheckSpelling
+
 class UI:
-    def __init__(self):
-        pass
+    def __init__(self, trie: object):
+        self.trie = trie
+        self.check_spelling = CheckSpelling(self.trie)
 
     def start(self):
-        """TODO"""
-        print("Write 'q' to quit.")
-        print("Write a word for spellchecker.")
+        """Starts the user interface."""
+        click.echo("Write 'q' to quit.")
+        click.echo("Write a word for spellchecker.")
 
         while True:
-            command = input("word: ")
+            word = click.prompt("word")
 
-            if command == "q":
+            if word == "q":
                 break
             else:
-                print("great!")
+                correct = self.check_spelling.check_word(word.lower())
+                if correct:
+                    click.echo("great!")
+                else:
+                    click.echo("too bad :(")

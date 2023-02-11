@@ -4,6 +4,7 @@ class Trie():
     """Represent a trie data structure."""
     def __init__(self):
         self.root = TrieNode("")
+        self.list = []
 
     def add_word(self, word: str):
         """Add a new word into the trie."""
@@ -35,3 +36,10 @@ class Trie():
         with open(file_path, encoding="utf-8") as file:
             for word in file.readlines():
                 self.add_word(word.strip())
+
+    def list_items(self, node: object, string: str):
+        for child in node.children:
+            newstring = string + node.children[child].char
+            if node.children[child].end_of_word:
+                self.list.append(newstring)
+            self.list_items(node.children[child], newstring)

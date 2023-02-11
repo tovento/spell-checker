@@ -1,10 +1,12 @@
 import click
 from services.check_spelling_service import CheckSpelling
+from services.suggest_spelling_service import SuggestSpelling
 
 class UI:
     def __init__(self, trie: object):
         self.trie = trie
         self.check_spelling = CheckSpelling(self.trie)
+        self.suggest_spelling = SuggestSpelling(self.trie)
 
     def start(self):
         """Start the user interface."""
@@ -22,3 +24,5 @@ class UI:
                     click.echo("great!")
                 else:
                     click.echo("too bad :(")
+                    suggestion = self.suggest_spelling.suggest_spelling(word.lower())
+                    click.echo(f"Did you mean {suggestion}?")

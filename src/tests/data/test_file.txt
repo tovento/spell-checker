@@ -1,8 +1,13 @@
 apple
 banana
+bananarama
+grape
 grapefruit
 lemon
 mango
+mangosteen
 papaya
 pitaya
+raspberry
+strawberry
 tangerine

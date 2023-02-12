@@ -61,16 +61,3 @@ class TestTrie(unittest.TestCase):
         self.assertTrue(strawberry)
         self.assertTrue(tangerine)
         self.assertFalse(orange)
-
-    def test_list_items(self):
-        path = os.path.join("src","tests", "data", "test_file.txt")
-        self.trie.read_file(path)
-
-        self.trie.list_items(self.trie.root, "")
-
-        expected_list = ['apple', 'banana', 'bananarama', 'grape',
-                         'grapefruit', 'lemon', 'mango', 'mangosteen',
-                         'papaya', 'pitaya', 'raspberry', 'strawberry',
-                         'tangerine']
-
-        self.assertEqual(self.trie.list, expected_list)

@@ -55,6 +55,8 @@ frequency](./data/wiktionary-40k.txt) is taken from
 
 [Requirements specification](./documentation/requirements-specification.md)
 
+[Implementation](./documentation/implementation.md)
+
 [Test documentation](./documentation/test-docs.md)
 
 ### Weekly reports

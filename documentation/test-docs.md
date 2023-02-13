@@ -19,4 +19,4 @@ structure test test the functions of the trie structure. There is:
 ### Unit test coverage
 
 Unit test coverage is 54 % as of Feb 12th, going down from 100%.
-![](./pictures/coverage.png)
+![](./pictures/coverage120223.png)

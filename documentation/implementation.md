@@ -2,6 +2,23 @@
 
 ## Architecture
 
+The application has the following packages:
+
+![](./pictures/package-diagram.png)
+
+- The package _ui_ is responsible for the user interface.
+- The package _services_ is responsible for the logic of the application.
+    - CheckSpelling checks if the input from the user is correctly
+      spelled or not
+    - SuggestSpelling suggests correctly spelled words for the
+      misspelled ones
+- The package _data_structures_ contains the data structures that were coded for
+  this project
+    - TrieNode represents one node in the trie structure
+    - Trie represents a trie data structure
+- The package _algorithms_ contains the algorithms needed for the project
+    - DamerauLevenshtein is an algorithm that calculates the Damerau-Levenshtein distance between two strings
+
 ## Process interactions
 
 ![](./pictures/sequence-diagram.png)

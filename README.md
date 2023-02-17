@@ -68,3 +68,5 @@ frequency](./data/wiktionary-40k.txt) is taken from
 [Week 3](./documentation/weekly-report-3.md)
 
 [Week 4](./documentation/weekly-report-4.md)
+
+[Week 5](./documentation/weekly-report-5.md)

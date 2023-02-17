@@ -5,8 +5,7 @@ class SuggestSpelling:
     Suggest a correct spelling for a word that was not among the accepted
     words.
     """
-    def __init__(self, trie: object, frequency_list: list):
-        self.trie = trie
+    def __init__(self, frequency_list: list):
         self.damlev = DamerauLevenshtein()
         self.frequency_list = frequency_list
 

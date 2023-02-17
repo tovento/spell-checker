@@ -5,7 +5,7 @@ from services.suggest_spelling_service import SuggestSpelling
 class UI:
     def __init__(self, trie: object, frequency_list: list):
         self.check_spelling = CheckSpelling(trie)
-        self.suggest_spelling = SuggestSpelling(trie, frequency_list)
+        self.suggest_spelling = SuggestSpelling(frequency_list)
 
     def start(self):
         """Start the user interface."""

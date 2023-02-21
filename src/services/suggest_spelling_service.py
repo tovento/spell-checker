@@ -2,7 +2,7 @@ from algorithms.damerau_levenshtein import DamerauLevenshtein
 
 class SuggestSpelling:
     """
-    Suggest a correct spelling for a word that was not among the accepted
+    Suggest correct spellings for a word that was not among the accepted
     words.
     """
     def __init__(self, frequency_list: list):
@@ -11,13 +11,13 @@ class SuggestSpelling:
 
     def suggest_spelling(self, word):
         """
-        Suggest a correctly spelled word.
+        Suggest correctly spelled words.
 
         Args:
             word: String. The misspelled word input by the user.
 
-        Returns: String. A correctly spelled word that is close to the original word in
-                 Damerau-Levenshtein distance.
+        Returns: List of strings. Three correctly spelled words that are close
+                 to the original word in Damerau-Levenshtein distance.
         """
         mindist = 1000
         candidates = []

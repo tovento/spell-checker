@@ -16,4 +16,4 @@ class TestSuggestSpelling(unittest.TestCase):
         suggestion_service.damlev = mock_dl
         result = suggestion_service.suggest_spelling(word)
 
-        self.assertEqual(result, 'correct word')
+        self.assertEqual(result[0], 'correct word')

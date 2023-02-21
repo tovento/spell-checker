@@ -39,3 +39,23 @@ class TestDamerauLevenshtein(unittest.TestCase):
         distance = self.dl.calculate_distance(word1, word2)
 
         self.assertEqual(distance, 2)
+
+    def test_multiple_distances(self):
+        original_word = "distance"
+        variation1 = "sistance"
+        variation2 = "disstanc"
+        variation3 = "idstanec"
+        variation4 = "idtsnaec"
+        variation5 = "suarabxw"
+
+        distance1 = self.dl.calculate_distance(original_word, variation1)
+        distance2 = self.dl.calculate_distance(original_word, variation2)
+        distance3 = self.dl.calculate_distance(original_word, variation3)
+        distance4 = self.dl.calculate_distance(original_word, variation4)
+        distance5 = self.dl.calculate_distance(original_word, variation5)
+
+        self.assertEqual(distance1, 1)
+        self.assertEqual(distance2, 2)
+        self.assertEqual(distance3, 2)
+        self.assertEqual(distance4, 4)
+        self.assertEqual(distance5, 7)

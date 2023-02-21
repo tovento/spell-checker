@@ -20,14 +20,26 @@ class SuggestSpelling:
                  Damerau-Levenshtein distance.
         """
         mindist = 1000
-        candidate = ""
+        candidates = []
         for accepted_word in self.frequency_list:
             distance = self.damlev.calculate_distance(
                                             word,
                                             accepted_word.lower())
             if distance < mindist:
                 mindist = distance
-                candidate = accepted_word
-                if distance == 1:
-                    return candidate
-        return candidate
+                if len(candidates) == 3:
+                    candidates.pop()
+                candidates.insert(0, (accepted_word, distance))
+            elif distance == mindist:
+                if len(candidates) == 3:
+                    if candidates[-1][1] <= distance:
+                        continue
+                    candidates.pop()
+                    if candidates[-1][1] == mindist:
+                        candidates.append((accepted_word, distance))
+                    else:
+                        candidates.insert(1, (accepted_word, distance))
+                else:
+                    candidates.append((accepted_word, distance))
+
+        return [candidate[0] for candidate in candidates]

@@ -23,5 +23,7 @@ class UI:
                     click.echo("great!")
                 else:
                     click.echo("too bad :(")
-                    suggestion = self.suggest_spelling.suggest_spelling(word.lower())
-                    click.echo(f"Did you mean {suggestion}?")
+                    suggestions = self.suggest_spelling.suggest_spelling(word.lower())
+                    click.echo(
+                        f"Did you mean {suggestions[0]}, " \
+                        f"{suggestions[1]} or {suggestions[2]}?")

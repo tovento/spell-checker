@@ -10,7 +10,7 @@ There are automated unit tests testing the modules.
 
 ### Testing the trie data structure
 
-[The unit tests](../src/tests/data_structures/trie/trie.py) for the trie data
+[The unit tests](../src/tests/data_structures/trie/trie_test.py) for the trie data
 structure test test the functions of the trie structure. There is:
 - a test that checks that the trie is empty after initialization,
 - a test that checks that adding words into the trie works as expected and

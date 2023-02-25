@@ -19,25 +19,31 @@ installed first.
 
 ## Command line instructions
 
-### Starting the application
+### Install the dependencies
+
+```
+poetry install
+```
+
+### Start the application
 
 ```
 poetry run invoke start
 ```
 
-### Running a pylint check
+### Run a pylint check
 
 ```
 poetry run invoke pylint
 ```
 
-### Running the tests
+### Run the tests
 
 ```
 poetry run invoke test
 ```
 
-### Creating a test coverage report
+### Create a test coverage report
 
 ```
 poetry run invoke coverage-report
@@ -59,6 +65,8 @@ frequency](./data/wiktionary-40k.txt) is taken from
 
 [Test documentation](./documentation/test-docs.md)
 
+[User guide](./documentation/user-docs.md)
+
 ### Weekly reports
 
 [Week 1](./documentation/weekly-report-1.md)
@@ -70,3 +78,5 @@ frequency](./data/wiktionary-40k.txt) is taken from
 [Week 4](./documentation/weekly-report-4.md)
 
 [Week 5](./documentation/weekly-report-5.md)
+
+[Week 6](./documentation/weekly-report-6.md)

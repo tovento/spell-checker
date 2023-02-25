@@ -6,7 +6,7 @@ There are automated unit tests testing the modules.
 
 ### Testing the Damerau-Levenshtein algorithm
 
-[The unit tests](../src/tests/algorithms/damerau_levenshtein_test.py) for the Damerau-Levenshtein algorithm test the different types of distance between words: addition, deletion, substitution and transposition. These tests still need some attention as they may not be sufficient as they are.
+[The unit tests](../src/tests/algorithms/damerau_levenshtein_test.py) for the Damerau-Levenshtein algorithm test the different types of distance between words: addition, deletion, substitution and transposition. Multiple variations of a string with their corresponding distances are also tested.
 
 ### Testing the trie data structure
 
@@ -31,5 +31,5 @@ service returns the expected suggestion.
 
 ### Unit test coverage
 
-Unit test coverage is 97 % as of Feb 17th.
-![](./pictures/coverage170223.png)
+Unit test coverage is 92 % as of Feb 25th.
+![](./pictures/coverage250223.png)

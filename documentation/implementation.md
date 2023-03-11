@@ -38,6 +38,15 @@ service. This service will use a list of 40 000 correctly spelled words that is 
 
 Finally, the UI will suggest this candidate to the user.
 
+## Time and space complexities
+
+A trie data structure is used to search for words in the dataset. This is done in a O(n) time complexity. N stands for the length of the input word.
+
+The Damerau-Levenshtein algorithm that is used for the application has O(n * m) time
+complexity, where n and m mean the lengths of the two strings compared.
+
+The space complexity of the application is O(n * m). The trie data structure demands this much space. N and m stand for the size and number of the strings stored in the trie.
+
 ## Data
 
 The application uses two lists of English words:
